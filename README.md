@@ -22,7 +22,7 @@ Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite
 
 ### Hooks com Redux
 
-1. Header/index.js
+1. **Header/index.js**
     1. Trocar
         ```
         import { connect } from 'react-redux';
@@ -48,7 +48,7 @@ Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite
         ```
     1. converter o restante dos componentes para useSelector e useDispatch.
 
-1. Home/index.js
+1. **Home/index.js**
     1. Trocar
         ```
         import { connect } from 'react-redux';
@@ -124,7 +124,7 @@ Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite
         };
       ```
 
-1. Cart/index.js
+1. **Cart/index.js**
     1. Trocar
         ```
         import { connect } from 'react-redux';
