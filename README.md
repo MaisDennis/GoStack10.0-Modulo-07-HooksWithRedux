@@ -24,99 +24,99 @@ Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite
 
 	2. Header/index.js
 		1. Trocar
-```
-import { connect } from 'react-redux';
-```
+        ```
+        import { connect } from 'react-redux';
+        ```
 		1. por
-```
-import { useSelector } from 'react-redux';
-```
+        ```
+        import { useSelector } from 'react-redux';
+        ```
 		1. Trocar
-```
-function Header( { cartSize } ) {
-```
+        ```
+        function Header( { cartSize } ) {
+        ```
 		1. por
-```
-export default function Header() {
-  const cartSize = useSelector(state => state.cart.length);
-```
+        ```
+        export default function Header() {
+          const cartSize = useSelector(state => state.cart.length);
+        ```
 		1. Deletar
-```
-export default connect(state => ({
-  cartSize: ,
-}))(Header);
-```
+        ```
+        export default connect(state => ({
+          cartSize: ,
+        }))(Header);
+        ```
 	1. converter o restante dos componentes para useSelector e useDispatch.
 
 	1. Home/index.js
 		1. Trocar
-```
-import { connect } from 'react-redux';
-```
+        ```
+        import { connect } from 'react-redux';
+        ```
 		1. por
-```
-import { connect, useSelector } from 'react-redux';
-```
+        ```
+        import { connect, useSelector } from 'react-redux';
+        ```
 		1. criar:
-```
-const amount = useSelector(state => state.cart.reduce((amount, product) => {
-    amount[product.id] = product.amount;
-    return amount;
-  }, {}),)
-```
+        ```
+        const amount = useSelector(state => state.cart.reduce((amount, product) => {
+            amount[product.id] = product.amount;
+            return amount;
+          }, {}),)
+        ```
 		1. Deletar amount
-```
-function Home( { amount, addToCartRequest }) {
-```
+        ```
+        function Home( { amount, addToCartRequest }) {
+        ```
 		1. Deletar
-```
-const mapStateToProps = state => ({
-  amount: state.cart.reduce((amount, product) => {
-    amount[product.id] = product.amount;
-    return amount;
-  }, {}),
-});
-```
+        ```
+        const mapStateToProps = state => ({
+          amount: state.cart.reduce((amount, product) => {
+            amount[product.id] = product.amount;
+            return amount;
+          }, {}),
+        });
+        ```
 		1. Deletar mapStateToProps e deixar null no lugar.
-```
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
-```
+        ```
+        export default connect(mapStateToProps, mapDispatchToProps)(Home);
+        ```
 	1. Vide que Adicionar ao Carrinho continua a funcionar.
 	2. Deletar
-```
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(CartActions, dispatch);
-export default connect(null, mapDispatchToProps)(Home);
-```
+        ```
+        const mapDispatchToProps = dispatch =>
+          bindActionCreators(CartActions, dispatch);
+        export default connect(null, mapDispatchToProps)(Home);
+        ```
 	1. add export default
-```
-export default function Home( { addToCartRequest }) {
-```
+        ```
+        export default function Home( { addToCartRequest }) {
+        ```
 	1. Trocar
-```
-import { connect, useSelector } from 'react-redux';
-```
+        ```
+        import { connect, useSelector } from 'react-redux';
+        ```
 	1. por
-```
-import { useDispatch, useSelector } from 'react-redux';
-```
+        ```
+        import { useDispatch, useSelector } from 'react-redux';
+        ```
 	1. Criar
-```
-const dispatch = useDispatch();
-```
+        ```
+        const dispatch = useDispatch();
+        ```
 	1. Remover addToCartRequest
-```
-export default function Home( { addToCartRequest }) {
-```
+        ```
+        export default function Home( { addToCartRequest }) {
+        ```
 1. Trocar o amount do state.cart.reduce para outra variavel = sumAmount
-```
-export default function Home() {
-  const [ products, setProducts ] = useState([]);
-  const amount = useSelector(state => state.cart.reduce((sumAmount, product) => {
-    sumAmount[product.id] = product.amount;
-    return sumAmount;
-  }, {}),)
-```
+        ```
+        export default function Home() {
+          const [ products, setProducts ] = useState([]);
+          const amount = useSelector(state => state.cart.reduce((sumAmount, product) => {
+            sumAmount[product.id] = product.amount;
+            return sumAmount;
+          }, {}),)
+        ```
 1.
 ```
  function handleAddProduct(id) {
@@ -126,36 +126,36 @@ export default function Home() {
 
 	1. Cart/index.js
 		1. Trocar
-```
-import { connect } from 'react-redux';
-```
+        ```
+        import { connect } from 'react-redux';
+        ```
 		1. por
-```
-import { useDispatch, useSelector } from 'react-redux';
-```
+        ```
+        import { useDispatch, useSelector } from 'react-redux';
+        ```
 		1. Deletar
-```
-import { bindActionCreators } from 'redux';
-```
+        ```
+        import { bindActionCreators } from 'redux';
+        ```
 		1. Deletar todas as props
-```
-function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
-```
+        ```
+        function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
+        ```
 		1. Criar total
-```
-  const total = useSelector(state => formatPrice(
-    state.cart.reduce((total, product) => { // reduce: 1 unico valor para todo array.
-      return total + product.price * product.amount;
-    }, 0),
-  )
-```
+        ```
+          const total = useSelector(state => formatPrice(
+            state.cart.reduce((total, product) => { // reduce: 1 unico valor para todo array.
+              return total + product.price * product.amount;
+            }, 0),
+          )
+        ```
 		1. Criar cart
-```
- const cart = useSelector(state => state.cart.map(product => ({
-    ...product,
-    subtotal: formatPrice(product.price * product.amount),
-  })),)
-```
+        ```
+        const cart = useSelector(state => state.cart.map(product => ({
+            ...product,
+            subtotal: formatPrice(product.price * product.amount),
+          })),)
+        ```
 		1.
 ```
 const dispatch = useDispatch();
@@ -201,7 +201,8 @@ state.cart.reduce((totalSum, product) => { // reduce: 1 unico valor para todo ar
                     }
                   />
                 </button>
-```		1. por
+```
+1. por
 ```
 dispatch(CartActions.removeFromCart(product.id))
 ```
