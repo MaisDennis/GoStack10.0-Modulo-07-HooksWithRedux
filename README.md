@@ -13,6 +13,7 @@ Uso de useSelector e useDispatch.
 2.  **useDispatch (disparar uma action do Redux).**
 
 Projeto Inicial: https://github.com/MaisDennis/GoStack10.0-Modulo-07
+
 Projeto com React Hooks: https://github.com/MaisDennis/GoStack10.0-Modulo-07-ReactHooks
 
 Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite adicionar os produtos ao 'Carrinho'. Na página do Carrinho,  podemos alterar a quantidade de cada produto, remover o produto e temos o retorno do valor subtotal e total de produtos em R$.
