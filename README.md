@@ -1,7 +1,7 @@
 ### Conceitos abordados:
 
-1.  useSelector (acessar uma informação do Redux).
-2.  useDispatch (disparar uma action do Redux).
+1.  **useSelector (acessar uma informação do Redux).**
+2.  **useDispatch (disparar uma action do Redux).**
 3.  Eliminar connect, mapStateToProps, mapDispatchToProps.
 
 ___
@@ -9,6 +9,8 @@ ___
 ### Desrição do projeto:
 
 Uso de useSelector e useDispatch.
+1.  **useSelector (acessar uma informação do Redux).**
+2.  **useDispatch (disparar uma action do Redux).**
 
 Projeto Inicial: https://github.com/MaisDennis/GoStack10.0-Modulo-07
 Projeto com React Hooks: https://github.com/MaisDennis/GoStack10.0-Modulo-07-ReactHooks
