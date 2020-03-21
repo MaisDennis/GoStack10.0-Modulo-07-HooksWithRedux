@@ -11,8 +11,6 @@
 2.  **useDispatch (disparar uma action do Redux).**
 3.  Eliminar connect, mapStateToProps, mapDispatchToProps.
 
-___
-
 ## 2. Desrição do projeto:
 
 Uso de useSelector e useDispatch.
