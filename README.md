@@ -1,4 +1,11 @@
-### Conceitos abordados:
+# GoStack 10.0 || Desafio 05
+
+* [1. Conceitos abordados](#1-conceitos-abordados)
+* [2. Descrição do projeto](#2-descrição-do-projeto)
+* [3. Iniciando o Projeto](#3-iniciando-o-projeto)
+* [4. Hooks com Redux](#4-hooks-com-redux)
+
+##  1. Conceitos abordados
 
 1.  **useSelector (acessar uma informação do Redux).**
 2.  **useDispatch (disparar uma action do Redux).**
@@ -6,7 +13,7 @@
 
 ___
 
-### Desrição do projeto:
+## 2. Desrição do projeto:
 
 Uso de useSelector e useDispatch.
 1.  **useSelector (acessar uma informação do Redux).**
@@ -18,12 +25,18 @@ Projeto com React Hooks: https://github.com/MaisDennis/GoStack10.0-Modulo-07-Rea
 
 Um website 'Rocketshoes', que tem uma lista de produtos (tênis). O site permite adicionar os produtos ao 'Carrinho'. Na página do Carrinho,  podemos alterar a quantidade de cada produto, remover o produto e temos o retorno do valor subtotal e total de produtos em R$.
 
-### Iniciando o projeto:
+## 3. Iniciando o projeto
 
-1.  json-server server.json -p 3333
-2.  yarn start
+1.  Iniciar a biblioteca JSON Server:
+```
+json-server server.json -p 3333
+```
+2.  Iniciar o React
+```
+yarn start
+```
 
-### Hooks com Redux
+## 4. Hooks com Redux
 
 1. **Header/index.js**
     1. Trocar
